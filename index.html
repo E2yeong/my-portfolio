@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- FontAwesome (아이콘용 CDN, 필요 시) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="cosmos-background">
+      <div class="stars-container"></div>
+    </div>
+
+    <div class="container-fluid h-100 d-flex flex-column">
+      <main class="flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+        <div class="carousel-container">
+          <div class="carousel" id="memory-carousel">
+            <!-- 카드 1 -->
+            <div class="memory-card" data-memory-id="1">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="card-content">
+                    <div class="Introduction">Self Introduction</div>
+                    <h3 class="center-name">Jooyeong Lee</h3>
+                    <h3 class="DOB">DOB</h3>
+                    <p class="description">
+                      Oct/5/2007
+                    </p>
+                    <div class="card-glow"></div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="card-content">
+                    <div class="Introduction">자기소개</div>
+                    <h3 class="center-name">이주영</h3>
+                    <h4 calss="DOB">생년월일</h4>
+                    <p class="description">
+                      2007.10.05
+                    </p>
+                    <div class="card-glow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- 카드 2 -->
+            <div class="memory-card" data-memory-id="2">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="card-content">
+                    <h3 class="Introduction3">💡 My Interests</h3>
+                   
+                    <h3 class="interest">· Web & App Development <br><br> · Cyber Security </h3>
+                    <p class="description">
+                      
+                    </p>
+                    <div class="card-glow"></div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="card-content">
+                    <h3 class="Introduction">💡 나의 관심</h3>
+                  <h3 class="interest">· 웹 & 앱 개발<br><br> · 정보 보안</h3>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="memory-card" data-memory-id="3">
+  <div class="card-inner">
+    <div class="card-front">
+      <div class="card-content">
+        <h3 class="Introduction">🛠 Major Projects</h3>
+        <div class="project-list">
+          <div class="project-item">
+            <h3 class="interest2">Vocabulary Application</h3>
+            <p class="description2">
+              ·Made with Android Studio <br>·Equipped with quiz function
+            </p>
+          </div>
+          <div class="project-item">
+            <h3 class="interest3">Book Management Program</h3>
+            <p class="description2">
+              ·Book registration function using ISBN <br>·Borrowing & returning function
+            </p>
+          </div>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+    <div class="card-back">
+      <div class="card-content">
+        <h3 class="Introduction">🛠 주요 프로젝트</h3>
+        <div class="project-list">
+          <div class="project-item">
+            <h3 class="interest2">단어 암기 어플</h3>
+            <p class="description2">
+              ·안드로이드 스튜디오로 제작 <br>·퀴즈 기능 탑재
+            </p>
+          </div>
+          <div class="project-item">
+            <h3 class="interest3">도서 관리 프로그램</h3>
+            <p class="description2">
+              ·ISBN을 이용한 책 등록 기능 탑재 <br>·책 대출&반납 기능 탑재
+            </p>
+          </div>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="memory-card" data-memory-id="4">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="card-content">
+                    <h3 class="Introduction2">Email</h3>
+                   
+                    <h3 class="interest5">DDAKSOUND@gmail.com</h3> <br> <h3 class="or">or</h3> <br> <h3 class="interest4">Jooyeoung20071005@gmail.com</h3>
+                    <div class="social-list">
+  <a href="https://github.com/WHENEVER3" target="_blank" class="social-item">
+    <img src="github.png" class="profile-img" alt="Github">
+    <span>GitHub</span>
+  </a>
+  <a href="https://www.youtube.com/@HOWHENWHAT" target="_blank" class="social-item">
+    <img src="youtube.png" class="profile-img" alt="Youtube">
+    <span>YouTube</span>
+  </a>
+  <a href="https://blog.naver.com/ddak_sound" target="_blank" class="social-item">
+    <img src="blog.png" class="profile-img" alt="blog">
+    <span>Blog</span>
+  </a>
+</div>
+                    <div class="card-glow"></div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="card-content">
+                    <h3 class="Introduction">이메일</h3>
+                  <h3 class="interest5">DDAKSOUND@gmail.com</h3> <br> <h3 class="or">or</h3> <br> <h3 class="interest4">Jooyeoung20071005@gmail.com</h3>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>        
+        <div class="carousel-controls">
+          <button id="prev-btn" class="control-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="next-btn" class="control-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
