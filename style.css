@@ -1,0 +1,416 @@
+/* ====== Base Styles & Theme Variables ====== */
+:root {
+  --primary: #9d00ff;
+  --secondary: #00e5ff;
+  --accent: #ff00e5;
+  --background: #333333;
+  --card-bg: rgba(70, 153, 210, 0.7);
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --glow-primary: 0 0 10px rgba(157, 0, 255, 0.7), 0 0 20px rgba(157, 0, 255, 0.5);
+  --glow-secondary: 0 0 10px rgba(0, 229, 255, 0.7), 0 0 20px rgba(0, 229, 255, 0.5);
+  --glow-accent: 0 0 10px rgba(255, 0, 229, 0.7), 0 0 20px rgba(255, 0, 229, 0.5);
+  --card-width: 300px;
+  --card-height: 420px;
+  --carousel-radius: 400px;
+  --transition-speed: 0.5s;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+}
+
+/* ====== Typography ====== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+  animation: pulse 3s infinite alternate;
+}
+
+/* ====== Cosmic Background ====== */
+.cosmos-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+.stars-container {
+  position: absolute;
+  width: 100%; height: 100%;
+  background-image: radial-gradient(1px 1px at 25% 25%, white, rgba(0, 0, 0, 0)),
+                    radial-gradient(1px 1px at 50% 50%, white, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 75% 75%, white, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 100% 100%, white, rgba(0, 0, 0, 0));
+  background-size: 200px 200px, 300px 300px, 400px 400px, 600px 600px;
+  background-repeat: repeat;
+  animation: twinkle 10s linear infinite;
+}
+
+@keyframes twinkle {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 200px 200px, 300px 300px, 400px 400px, 600px 600px; }
+}
+
+/* ====== Carousel & Card Styles ====== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+}
+.carousel {
+  position: relative;
+  width: var(--carousel-radius);
+  height: var(--carousel-radius);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+.memory-card {
+  position: absolute;
+  width: var(--card-width);
+  height: var(--card-height);
+  left: 50%; top: 50%;
+  margin-left: calc(var(--card-width) / -2);
+  margin-top: calc(var(--card-height) / -2);
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.memory-card:hover .card-inner { transform: translateZ(20px); }
+.memory-card.flipped .card-inner { transform: rotateY(180deg); }
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%; height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(70,163,210,0.5);
+}
+.card-front {
+  background: linear-gradient(135deg, rgba(24,36,73,0.95), rgba(63,86,139,0.95));
+  border: 1px solid rgba(14,14,22,0.3);
+  transform-style: preserve-3d;
+    background-size: 250% 250%;
+   animation: gradientMove 5s ease infinite alternate;
+}
+
+.card-back {
+  background: linear-gradient(135deg, rgba(24,36,73,0.95), rgba(63,86,139,0.95));
+  border: 1px solid rgba(14,14,22,0.3);
+ 
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.interest {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.0rem;
+  color: #ffffff;
+  margin-top: 75px;
+}
+
+.Introduction {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.0rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255,255,255,255);
+  font-weight: bolder;
+}
+.Introduction2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255,255,255,255);
+  font-weight: bolder;
+}
+.Introduction3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.0rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255,255,0,1);
+  font-weight: bolder;
+}
+
+.DOB h3 {
+   text-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 10rem;
+}
+/* 특별히 이름만 완전 중앙에 */
+.center-name {
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+.memory-image {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.3);
+}
+.memory-image i {
+  color: var(--primary);
+  font-size: 4rem;
+  text-shadow: var(--glow-primary);
+  animation: pulse 3s infinite alternate;
+  z-index: 2;
+}
+.glitch-effect {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(45deg, transparent 65%, rgba(157,0,255,0.3) 70%, transparent 75%);
+  background-size: 200% 200%;
+  animation: glitch 3s linear infinite;
+  z-index: 1;
+}
+@keyframes glitch {
+  0% { background-position: 0 0; }
+  25% { background-position: 100% 0; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+
+.MI {
+  font-size: 1.0rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 170px;
+  width: 110%;
+}
+.MII{
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: -100px;
+}
+.description {
+  font-size: 1.0rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  font-weight: 100px;
+  margin-top: 10px;
+}
+.description2 {
+  font-size: 0.8rem;
+  color: #E2E2B6;
+  margin-bottom: 40px;
+  flex-grow: 1;
+  font-weight: 400;
+}
+.interest2 {
+   font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  color: #6EACda;
+  margin-top: 30px;
+}
+.or {
+font-family: "Orbitron", sans-serif;
+  font-size: 1.0rem;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.interest4 {
+  font-family: "Orbitron", sans-serif;
+  margin-top: 10px;
+  font-size: 1.0rem;
+  margin-bottom: 30px;
+}
+.interest5 {
+  font-family: "Orbitron", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 75;
+  font-size: 1.2rem;
+}
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ← 왼쪽 세로정렬의 핵심! */
+  width: 100%;
+  gap: 0.5rem; /* 각 프로젝트 사이 간격 */
+}
+.social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;  /* 왼쪽 정렬, center로 바꾸면 가운데 */
+  gap: 16px;               /* 아이콘 간 간격 */
+  margin-top: 15px;
+}
+
+.profile-img {
+  width: 40px;          /* 원하는 크기로 변경 */
+  height: 40px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* 기본 그림자(연하게) */
+  box-shadow: 0 1px 6px #00f0f3;
+  transition: 
+    box-shadow 0.3s ease,
+    transform 0.2s;
+}
+
+.profile-img:hover {
+  /* 마우스 올릴 때 네온 box-shadow 효과 */
+  transform: scale(1.12);
+  box-shadow: 
+    -5px -5px 23px #eb00ff,
+     5px  5px 23px #00f0ff;
+}
+
+.project-item {
+  margin-bottom: 0.5rem;
+}
+
+.project-item h3 {
+  margin-bottom: 0.2rem;
+  /* 필요시 폰트나 색상 조절 */
+}
+
+.interest3 {
+   font-family: "Orbitron", sans-serif;
+  font-size: 1.0rem;
+  color: #6EACda;
+  margin-top: 30px;
+}
+
+.card-back .card-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.memory-coordinates {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.time-stamp { color: var(--accent); }
+.card-glow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 15px;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(157,0,255,0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.memory-card:hover .card-glow { opacity: 1; }
+
+/* Carousel Controls */
+.carousel-controls {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+.control-btn {
+  background: rgba(20,20,40,0.7);
+  border: 1px solid var(--primary);
+  color: var(--text-primary);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-primary);
+}
+.control-btn:hover {
+  background: rgba(30,30,60,0.9);
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --card-width: 250px;
+    --card-height: 350px;
+    --carousel-radius: 300px;
+  }
+  .title { font-size: 1.8rem; }
+  .carousel-container { height: 400px; }
+  .memory-card h3 { font-size: 1.2rem; }
+  .memory-image { height: 120px; }
+}
+@media (max-width: 576px) {
+  :root {
+    --card-width: 220px;
+    --card-height: 320px;
+    --carousel-radius: 250px;
+  }
+  .title { font-size: 1.5rem; }
+  .carousel-container { height: 350px; }
+}
+
+
