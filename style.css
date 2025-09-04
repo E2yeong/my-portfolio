@@ -84,7 +84,7 @@ html {
   animation-delay: 2.5s; 
 
     border: 0;
-  border-bottom: 1.2px solid transparent; /* 굵기 설정 */
+  border-bottom: 1.2px solid transparent;
   border-image: linear-gradient(
     to right,
     rgba(0,0,0,0),
@@ -103,7 +103,7 @@ color:#1dd1a1;
     font-size: 1rem;
    text-align: center;
    margin-top: -10px;
-   opacity: 0;                
+   opacity: 0;            
 }
 
 .portfolio-text{
@@ -143,8 +143,8 @@ color:#1dd1a1;
 .Me {
   position: relative;
   height: 20rem;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+  margin-left: 15%;
+  margin-right: 15%;
   border-radius: 30px;
   background-color: #2e313d;
   border-width: medium;
@@ -171,15 +171,15 @@ color:#1dd1a1;
   line-height: 150%;
   font-family: "Inter", sans-serif;
   font-weight: normal;
-  top: 100px;
+  top: 30%;
   width: 100%;
   text-align: center;
   position: absolute;
   }
 
 .social1 {
-  width: 50px;   /* 원하는 가로 크기 */
-  height: 50px;   /* 비율 유지 */
+  width: 3.3%;   /* 원하는 가로 크기 */
+  height: 16%;   /* 비율 유지 */
   margin-left: 40%;
   margin-top: 10%;
   text-decoration: none;
@@ -201,8 +201,8 @@ color:#1dd1a1;
 }
 
 .social2 {
-  width: 50px;   /* 원하는 가로 크기 */
-  height: 50px;   /* 비율 유지 */
+  width: 3.3%;   /* 원하는 가로 크기 */
+  height: 16%;   /* 비율 유지 */
   margin-left: 5%;
   text-decoration: none;
    object-fit: cover;
@@ -223,8 +223,8 @@ color:#1dd1a1;
 
 
 .social3 {
-  width: 50px;   /* 원하는 가로 크기 */
-  height: 50px;   /* 비율 유지 */
+  width: 3.3%;   /* 원하는 가로 크기 */
+  height: 16%;   /* 비율 유지 */
   margin-left: 5%;
     object-fit: cover;
   border-radius: 10px;
@@ -270,11 +270,11 @@ color:#1dd1a1;
   color: #fff;
   text-decoration: none;
   position: relative;
-  top: 30px;                    /* px 단위 권장 (cm 대신) */
+  top: 30%;                    /* px 단위 권장 (cm 대신) */
   border-radius: 50px;
-  padding: 5px 15px;
   background-color: #2e313d;
   height: 2em;
+  width: 6em;
 
   transition: all 0.3s ease;
 }
@@ -288,10 +288,10 @@ margin-right: 10%;
 
 }
 .Certification img {
-  width: 530px;   /* 원하는 가로 크기 */
+  width: 30%;   /* 원하는 가로 크기 */
   height: auto;   /* 비율 유지 */
   position: relative;
-  top: 40px;
+  top: 2em;
   object-position: center;
 }
 .Certification, .Career {
@@ -312,7 +312,7 @@ margin-right: 10%;
   position: relative;
   font-weight: bold;
   color: #fff;
-  top: 55px;
+  top: 3em;
   display: block;
 }
 .active-section {
