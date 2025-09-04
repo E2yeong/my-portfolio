@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const slideTargets = document.querySelectorAll('.Introduction, .Me');
   slideTargets.forEach((el, i) => {
     el.classList.add('slide-in-left');        // 초기 상태 클래스 부여
-    el.style.setProperty('--delay', `${i * 120}ms`);
+    el.style.setProperty('--delay', `${i * 10}ms`);
     io.observe(el);
   });
 
