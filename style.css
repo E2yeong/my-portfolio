@@ -368,8 +368,8 @@ body::-webkit-scrollbar-thumb {
 .hero-buttons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    margin-left: 26%;
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
@@ -1529,3 +1529,4 @@ body::-webkit-scrollbar-thumb {
         grid-template-columns: 1fr;
     }
 }
+
