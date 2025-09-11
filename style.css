@@ -371,6 +371,7 @@ body::-webkit-scrollbar-thumb {
      justify-content: center;
     gap: 1rem;
     align-items: center;
+    text
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
@@ -1382,10 +1383,6 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     box-shadow: 0 10px 20px rgba(6, 182, 212, 0.25);
 }
-.Message-btn{
-    text-decoration: none;
-    color: white;
-}
 .contact-btn:hover {
     box-shadow: 0 15px 30px rgba(6, 182, 212, 0.4);
 }
@@ -1533,3 +1530,4 @@ body::-webkit-scrollbar-thumb {
         grid-template-columns: 1fr;
     }
 }
+
