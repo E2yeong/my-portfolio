@@ -1,121 +1,819 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jooyeong Lee - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav-container">
+        <div class="nav-content">
+            <a href="#top" class="nav-logo">Jooyeong Lee</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-desktop">
+                <a href="#introduction" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
 
-  <nav class="Link_button">
-  <a href="#Introduction">About me</a>
-  <a href="#projects">Achievements</a>
-  <a href="#contact">Study Note</a>
-  <a href="#top">Jooyeong Lee</a> 
-</nav>
+            <!-- Mobile Menu Button -->
+            <button class="nav-mobile-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
 
+        <!-- Mobile Menu -->
+        <div class="nav-mobile" id="mobileMenu">
+            <div class="nav-mobile-content">
+                <a href="#introduction" class="nav-mobile-link">About</a>
+                <a href="#skills" class="nav-mobile-link">Skills</a>
+                <a href="#projects" class="nav-mobile-link">Projects</a>
+                <a href="#contact" class="nav-mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<h1 class="top_link">
-<section id="top">sdsd</section>
-</h1>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <!-- Background Pattern -->
+            <div class="hero-bg"></div>
+            <div class="hero-radial"></div>
+            
+            <!-- Floating particles -->
+            <div class="particles-container" id="particles"></div>
 
-<div class="line" ><div class="lineborder"></div></div> <!--여백채우기-->
+            <div class="hero-content">
+                <div class="hero-greeting">Hello, I'm</div>
+                
+                <h1 class="hero-title">Jooyeong Lee</h1>
+                
+                <div class="hero-subtitle">
+                    <span class="hero-role">Computer Science & Cybersecurity Enthusiast</span>
+                    <p class="hero-description">Passionate about building secure, innovative applications</p>
+                </div>
 
+                <div class="hero-buttons">
+                    <a href="#introduction" class="btn-primary">
+                        Explore My Work
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
 
-  <!--Hero 섹션 -->
-  <section class="hero">
-    <h1 class="intro-text">Welcome To My<br> <span class="portfolio-text">Portfolio</span></h1>
-  </section>
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section id="introduction" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">A passionate high school senior with a vision for secure, innovative technology</p>
+                </div>
 
+                <div class="about-grid">
+                    <!-- Left Column - Image and Stats -->
+                    <div class="about-left">
+                        <div class="about-card">
+                            <div class="about-card-bg"></div>
+                            <div class="about-card-content">
+                                <div class="about-image-container">
+                                    <img src="https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGRldmVsb3BlciUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NTc1ODc2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Developer workspace" class="about-image">
+                                    
+                                    <!-- Stats -->
+                                    <div class="about-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-number">2024</div>
+                                            <div class="stat-label">Udemy Ethical Hacking Certification</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-number">3</div>
+                                            <div class="stat-label">Projects Completed</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-number">4</div>
+                                            <div class="stat-label">Study Note Repositories</div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <!-- Social Links -->
+                                <div class="social-links">
+                                    <a href="https://blog.naver.com/ddak_sound" target="_blank" class="social-link" title="Blog">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/E2yeong" target="_blank" class="social-link" title="GitHub">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.youtube.com/@E2yeong" target="_blank" class="social-link" title="YouTube">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                            <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Right Column - Content -->
+                    <div class="about-right">
+                        <div class="about-text">
+                            <p>I am <span class="highlight-cyan">Jooyeong Lee</span>, a high school senior with an unwavering passion for <span class="highlight-purple">Computer Science</span> and <span class="highlight-cyan">Cybersecurity</span>.</p>
+                            
+                            <p>My journey in technology is driven by a desire to create secure, innovative applications that make a meaningful impact. I believe that security isn't just technical knowledge—it's a responsibility we carry as developers.</p>
+                            
+                            <p>Through hands-on projects like building a vocabulary app with quiz functionality and a comprehensive library management system, I've discovered the joy of transforming ideas into functional solutions.</p>
+                        </div>
 
-<div class="Me">
+                        <!-- Key Focus Areas -->
+                        <div class="focus-areas">
+                            <div class="focus-card focus-cs">
+                                <h4>Computer Science</h4>
+                                <p>Algorithm design, data structures, and software engineering principles</p>
+                            </div>
+                            
+                            <div class="focus-card focus-security">
+                                <h4>Cybersecurity</h4>
+                                <p>Ethical hacking, network security, and digital forensics</p>
+                            </div>
+                        </div>
 
-    <nav class="Introduction">
-<section id="Introduction">About me</section>
-</nav>
+                        <!-- Goals -->
+                        <div class="goals-card">
+                            <h4>
+                                <span class="goals-dot"></span>
+                                University Goals
+                            </h4>
+                            <p>At university, I aim to deepen my computer science foundation and collaborate on projects that bridge the gap between innovative technology and cybersecurity, creating solutions that are both cutting-edge and secure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<span class="mydes">
-I am Jooyeong Lee, a high school senior passionate about Computer Science and Cybersecurity. <br>
-I enjoy applying what I learn by building projects, such as a vocabulary app with a quiz function and a library management program 
-with ISBN and borrowing features. <br>In 2024, I completed the Udemy Ethical Hacking course, which showed me that security is not only 
-technical knowledge but also responsibility.
-<br>At university, I aim to deepen my CS foundation and create secure, user-centered applications that make a meaningful impact.
-</span>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-subtitle">Continuously learning and mastering technologies in Computer Science and Cybersecurity</p>
+                </div>
 
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"></polyline>
+                                    <polyline points="8,6 2,12 8,18"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65"></div>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
 
-    <a href="https://blog.naver.com/ddak_sound" target="_blank">
-  <img class="social1" src="blog.png"/>
-  </a>
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3>Cybersecurity</h3>
+                        </div>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Ethical Hacking</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Network Security</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Penetration Testing</span>
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Digital Forensics</span>
+                                    <span class="skill-percent">55%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="55"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12,2 a15.3,15.3 0 0,1 0,20 a15.3,15.3 0 0,1 0,-20"></path>
+                                </svg>
+                            </div>
+                        
+                            <h3>Web Development</h3>
+                        </div>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">Currently Leargning</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="0"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">Currently Learning</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="0"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <a href="https://github.com/E2yeong" target="_blank">
-  <img class="social2" src="github.png"/>
-  </a>
-  
-    <a href="https://www.youtube.com/@E2yeong" target="_blank">
-  <img class="social3" src="youtube.png"/>
-  </a>
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4,17 10,11 4,5"></polyline>
+                                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                                </svg>
+                            </div>
+                            <h3>Tools & Technologies</h3>
+                        </div>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git/GitHub</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Linux</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percent">Currently Leargning%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="0"></div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
 
-</div>
+                <!-- Certifications -->
+                <div class="certifications">
+                    <h3 class="certifications-title">Certifications & Achievements</h3>
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <circle cx="12" cy="16" r="1"></circle>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <span class="cert-year">2024</span>
+                            <h4 class="cert-title">Udemy Ethical Hacking</h4>
+                            <p class="cert-issuer">Udemy</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 17H5.5A2.5 2.5 0 0 1 8 14.5V2Z"></path>
+                                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44L22 17h-3.5A2.5 2.5 0 0 0 16 14.5V2Z"></path>
+                                </svg>
+                            </div>
+                            <span class="cert-year">2024-2025</span>
+                            <h4 class="cert-title">Computer Science Fundamentals</h4>
+                            <p class="cert-issuer">Self-Study</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12,2 a15.3,15.3 0 0,1 0,20 a15.3,15.3 0 0,1 0,-20"></path>
+                                </svg>
+                            </div>
+                            <span class="cert-year">2023-2025</span>
+                            <h4 class="cert-title">Web Development</h4>
+                            <p class="cert-issuer">Various Platforms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<nav class="Projects">
-<section id="projects">Achievements</section>
-</nav>
+        <!-- Achievements Section -->
+        <section id="projects" class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects & Achievements</h2>
+                    <p class="section-subtitle">Showcasing my journey through practical applications and continuous learning</p>
+                </div>
+                
+                <!-- Tab Navigation -->
+                <div class="tab-nav">
+                    <div class="tab-nav-container">
+                        <button class="tab-btn active" data-tab="projects">Projects</button>
+                        <button class="tab-btn" data-tab="certifications">Certifications</button>
+                    </div>
+                </div>
 
-<nav class="Projects_button">
-  <span class="Certificate">
-<a href="#Certificate">Certificate</a>
-  </span>
-<span class="Myprojects">
-<a href="#Myprojects">Projects</a>
-</span>
-</nav>
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Projects Tab -->
+                    <div class="tab-pane active" id="projects-tab">
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1606606767399-01e271823a2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwaGFja2VyJTIwY29kZXxlbnwxfHx8fDE3NTc1ODc2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Vocabulary Learning App">
+                                    <div class="project-overlay"></div>
+                                    <div class="project-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Vocabulary Learning App</h3>
+                                    <p class="project-description">Interactive vocabulary app with quiz functionality, progress tracking, and spaced repetition algorithm.</p>
+                                    
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Java</span>
+                                    </div>
+                                    
+                                    <div class="project-features">
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Quiz System
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Progress Tracking
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            User Statistics
+                                        </div>
+                                    </div>
 
-<nav class="Certification">
-<section id="Certificate"><img src="Hacking_Certification.jpg" alt=Hacking_Certification>
-<span class="Cer_Title"><span class="highlight">Udemy</span> Hacking Certification</span>
-</section>
-</nav>
+                                    <div class="project-buttons">
+                                        <button class="project-btn project-btn-code">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                        <button class="project-btn project-btn-demo">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15,3 21,3 21,9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                            Video
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1640552421163-5a8e34827550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwY2lyY3VpdCUyMGJvYXJkfGVufDF8fHx8MTc1NzUxMDU5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                                    alt="Library Management System">
+                                    <div class="project-overlay"></div>
+                                    <div class="project-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Library Management System</h3>
+                                    <p class="project-description">Comprehensive library management with ISBN integration, borrowing system, and inventory tracking.</p>
+                                    
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">API</span>
+                                        <span class="tech-tag">Jframe</span>
+                                    </div>
+                                    
+                                    <div class="project-features">
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            ISBN Integration
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Borrowing System
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Inventory Management
+                                        </div>
+                                    </div>
 
+                                    <div class="project-buttons">
+                                        <button class="project-btn project-btn-code">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                        <button class="project-btn project-btn-demo">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15,3 21,3 21,9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-<nav class="Career">
-<section id="Myprojects"></section>
-</nav>
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGRldmVsb3BlciUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NTc1ODc2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Cybersecurity Lab Projects">
+                                    <div class="project-overlay"></div>
+                                    <div class="project-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="16,18 22,12 16,6"></polyline>
+                                            <polyline points="8,6 2,12 8,18"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Cybersecurity Lab Projects</h3>
+                                    <p class="project-description">Collection of ethical hacking tools and security analysis scripts developed during certification course.</p>
+                                    
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                    </div>
+                                    
+                                    <div class="project-features">
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Network Analysis
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Vulnerability Scanning
+                                        </div>
+                                        <div class="feature-item">
+                                            <span class="feature-dot"></span>
+                                            Security Tools
+                                        </div>
+                                    </div>
 
-<nav class="Study_Note">
-<section id="contact">Study Note</section>
-</nav>
+                                    <div class="project-buttons">
+                                        <button class="project-btn project-btn-code">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                            </svg>
+                                            Code
+                                        </button>
+                                        <button class="project-btn project-btn-demo">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15,3 21,3 21,9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                            Demo
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Tab -->
+                    <div class="tab-pane" id="certifications-tab">
+                        <div class="cert-detail-container">
+                            <div class="cert-detail-card">
+                                <div class="cert-detail-flex">
+                                    <div class="cert-detail-image">
+                                        <img src="Hacking_Certification.jpg">
+                                    </div>
+                                    
+                                    <div class="cert-detail-info">
+                                        <div class="cert-detail-header">
+                                            <h3 class="cert-detail-title">Udemy Ethical Hacking Certification</h3>
+                                            <div class="cert-detail-meta">
+                                                <span class="cert-detail-issuer">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M6 9l6 6 6-6"></path>
+                                                    </svg>
+                                                    Udemy
+                                                </span>
+                                                <span class="cert-detail-year">2024</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <p class="cert-detail-description">Comprehensive course covering penetration testing, network security, 
+                                            and ethical hacking methodologies.</p>
+                                        
+                                        <div class="cert-highlights">
+                                            <h4 class="highlights-title">Key Areas Covered:</h4>
+                                            <div class="highlights-tags">
+                                                <span class="highlight-tag">Penetration Testing</span>
+                                                <span class="highlight-tag">Network Security</span>
+                                                <span class="highlight-tag">Digital Forensics</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="notes-container">
-  <a href="https://e2yeong.github.io/ComputerScience" target="_blank" class="note-card">
-    <h3>📘 Computer Science Notes</h3>
-    <p>Boolean Algebra, Graph Theory, Algorithms</p>
-  </a>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Study Notes & Contact</h2>
+                    <p class="section-subtitle">Explore my learning journey and get in touch for collaboration opportunities</p>
+                </div>
 
-  <a href="https://e2yeong.github.io/CyberSecurity-Lab" target="_blank" class="note-card">
-    <h3>🔐 Cybersecurity Notes</h3>
-    <p>Security, Hash, CTF Write-up</p>
-  </a>
+                <div class="contact-grid">
+                    <!-- Study Notes -->
+                    <div class="contact-left">
+                        <div class="study-header">
+                            <h3>📚 Knowledge Repository</h3>
+                            <p>Comprehensive study notes documenting my learning journey across various subjects</p>
+                        </div>
 
-    <a href="https://e2yeong.github.io/Physics-Note" target="_blank" class="note-card">
-    <h3>⚛️ Physics Notes</h3>
-    <p>Mechanics, Motion & Force, Energy & Work</p>
-  </a>
+                        <div class="study-notes-grid">
+                            <a href="https://e2yeong.github.io/ComputerScience" target="_blank" class="study-note-card">
+                                <div class="study-note-header">
+                                    <h4>📘 Computer Science Notes</h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15,3 21,3 21,9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </div>
+                                
+                                <p>Boolean Algebra, Graph Theory, Algorithms, Data Structures</p>
+                                
+                                <div class="study-note-footer">
+                                    <span class="study-note-stats">25+ Topics Covered</span>
+                                    <span class="study-note-action">Click to explore →</span>
+                                </div>
+                            </a>
 
-    <a href="https://e2yeong.github.io/Calculus-Note" target="_blank" class="note-card">
-    <h3>📐 Calculus Notes</h3>
-    <p>Limits, Derivatives, Integrals</p>
-  </a>
-</div>
+                            <a href="https://e2yeong.github.io/CyberSecurity_Lab" target="_blank" class="study-note-card">
+                                <div class="study-note-header">
+                                    <h4>🔐 Cybersecurity Notes</h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15,3 21,3 21,9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </div>
+                                
+                                <p>Security Fundamentals, Hash Functions, CTF Write-ups</p>
+                                
+                                <div class="study-note-footer">
+                                    <span class="study-note-stats">15+ Security Topics</span>
+                                    <span class="study-note-action">Click to explore →</span>
+                                </div>
+                            </a>
 
+                            <a href="https://e2yeong.github.io/Physics-Note" target="_blank" class="study-note-card">
+                                <div class="study-note-header">
+                                    <h4>⚛️ Physics Notes</h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15,3 21,3 21,9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </div>
+                                
+                                <p>Classical Mechanics, Motion & Force, Energy & Work</p>
+                                
+                                <div class="study-note-footer">
+                                    <span class="study-note-stats">Physics Fundamentals</span>
+                                    <span class="study-note-action">Click to explore →</span>
+                                </div>
+                            </a>
 
+                            <a href="https://e2yeong.github.io/Calculus-Note" target="_blank" class="study-note-card">
+                                <div class="study-note-header">
+                                    <h4>📐 Calculus Notes</h4>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15,3 21,3 21,9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </div>
+                                
+                                <p>Limits, Derivatives, Integrals, Advanced Calculus</p>
+                                
+                                <div class="study-note-footer">
+                                    <span class="study-note-stats">Mathematical Analysis</span>
+                                    <span class="study-note-action">Click to explore →</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-  <script src="script.js"></script>
+                    <!-- Contact Information -->
+                    <div class="contact-right">
+                        <div class="contact-card">
+                            <h3>
+                                <span class="contact-dot"></span>
+                                Let's Connect
+                            </h3>
+                            
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Email</p>
+                                        <a href="mailto:jooyeong.lee@example.com" class="contact-value">jooyeong.lee@example.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Location</p>
+                                        <p class="contact-value">South Korea</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="contact-label">Status</p>
+                                        <p class="contact-value">High School Senior - Class of 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="university-info">
+                                <h4>University Applications</h4>
+                                <p>Currently seeking admission to top Computer Science programs. Open to discussing research opportunities and collaboration.</p>
+                                
+                                <button class="contact-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                    </svg>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement Banner -->
+                <div class="achievement-banner">
+                    <h3>Ready to Make an Impact at University</h3>
+                    <p>With a solid foundation in Computer Science and Cybersecurity, hands-on project experience, and a passion for secure innovation, I'm excited to contribute to academic research and collaborative projects at the university level.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Jooyeong Lee. Crafted with passion for innovation and security.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
