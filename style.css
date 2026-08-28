@@ -1163,6 +1163,147 @@ body::-webkit-scrollbar-thumb {
     color: #67e8f9;
 }
 
+/* Leadership Reflection Section */
+.leadership-section {
+    padding: 5rem 0;
+    scroll-margin-top: 4rem;
+}
+
+.leadership-intro {
+    max-width: 56rem;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    color: #d1d5db;
+    line-height: 1.75;
+}
+
+.leadership-photo {
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.leadership-photo img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.leadership-photo-credit {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.leadership-photo-credit a {
+    color: #6b7280;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.leadership-photo-credit a:hover {
+    color: #06b6d4;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.leadership-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.5));
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.leadership-card.in-view {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+.leadership-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.leadership-icon {
+    padding: 0.75rem;
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
+    border-radius: 0.75rem;
+    display: inline-flex;
+}
+
+.leadership-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #06b6d4;
+}
+
+.leadership-tag {
+    font-size: 0.75rem;
+    color: #67e8f9;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.leadership-card h3 {
+    font-size: 1.15rem;
+    color: white;
+    margin-bottom: 0.6rem;
+}
+
+.leadership-card p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.75;
+}
+
+.leadership-banner {
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.leadership-banner.in-view {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.leadership-banner h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.leadership-banner p {
+    color: #d1d5db;
+    max-width: 48rem;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 5rem 0;
@@ -1521,7 +1662,15 @@ body::-webkit-scrollbar-thumb {
     .certifications-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .leadership-photo img {
+        height: 200px;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
