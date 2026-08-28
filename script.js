@@ -113,7 +113,8 @@ function initScrollAnimations() {
     // Observe elements for animations
     const animateElements = document.querySelectorAll(
         '.about-left, .about-right, .skill-category, .certifications, ' +
-        '.project-card, .contact-left, .contact-right, .achievement-banner'
+        '.project-card, .leadership-card, .leadership-banner, ' +
+        '.contact-left, .contact-right, .achievement-banner'
     );
 
     animateElements.forEach(el => observer.observe(el));
