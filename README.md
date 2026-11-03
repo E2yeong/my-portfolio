@@ -21,8 +21,8 @@ Clone the repository and open `index.html` in a browser.
 | | Repository | Live site |
 |---|---|---|
 | Ullim music player (Electron) | [Ullim-Player](https://github.com/E2yeong/Ullim-Player) | |
-| Password security toolkit | [password-security-toolkit](https://github.com/E2yeong/password-security-toolkit) | [demo](https://e2yeong.github.io/password-security-toolkit/) |
 | Library management system (Java) | [Library-GLCS](https://github.com/E2yeong/Library-GLCS) | |
+| Document search engine (Python / Flask) | [source and setup](https://github.com/E2yeong/ComputerScience/tree/main/projects/search-engine) | |
 | Vocabulary quiz app (Android) | [WordApp](https://github.com/E2yeong/WordApp) | |
 | Computer science notes and projects | [ComputerScience](https://github.com/E2yeong/ComputerScience) | [notes](https://e2yeong.github.io/ComputerScience/) |
 | Cybersecurity notes | [CyberSecurity-Lab](https://github.com/E2yeong/CyberSecurity-Lab) | [notes](https://e2yeong.github.io/CyberSecurity-Lab/) |
